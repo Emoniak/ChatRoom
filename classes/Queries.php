@@ -1,7 +1,7 @@
 <?php
 class Queries
 {
-    private $dsn  = "mysql:dbname=projetphp;host=localhost;charset=utf8";
+    private $dsn  = "mysql:dbname=chatroom;host=localhost;charset=utf8";
     private $username = "root";
     private $password = "";
     private $db;
