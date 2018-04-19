@@ -1,9 +1,9 @@
 <?php
 class Queries
 {
-    private $dsn  = "mysql:dbname=chatroom;host=localhost;charset=utf8";
+    private $dsn  = "mysql:dbname=chatboot;host=localhost;charset=utf8";
     private $username = "root";
-    private $password = "";
+    private $password = "@ssassin1397";
     private $db;
 
     function __construct()
@@ -29,6 +29,11 @@ class Queries
             $stmt-> bindParam(1,$value);
             $stmt-> execute();
         }
+    }
+
+    function insertUtilisateur($values) {
+        self::prepareProcedure($values);
+        $this -> db -> query("CALL INSERT_UTILISATEUR(@p1, @p2, @p3);");
     }
 
     function insertMessage($values){
