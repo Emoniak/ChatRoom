@@ -31,13 +31,18 @@ class Queries
         }
     }
 
-    function insertUpdateMessage($values){
+    function insertMessage($values){
         self::prepareProcedure($values);
-        $this -> db -> query("CALL INSERT_MESSAGE();"); //TODO METTRE LES PARAMS
+        $this -> db -> query("CALL INSERT_MESSAGE(@p1, @p2, @p3);");
+    }
+
+    function updateMessage($values) {
+        self::prepareProcedure($values);
+        $this->db -> query("CALL UPDATE_MESSAGE(@p1, @p2, @p3);");
     }
 
     function deleteMessage($id) {
         self::prepareProcedure($id);
-        $this -> db -> query("CALL DELETE_MESSAGE();"); //TODO METTRE LES PARAMS
+        $this -> db -> query("CALL DELETE_MESSAGE(@p1);");
     }
 }
