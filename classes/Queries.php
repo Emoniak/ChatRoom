@@ -39,7 +39,7 @@ class Queries
     function connexionUtilisateur($values)
     {
         self::prepareProcedure($values);
-        $this -> db -> query("CALL UTILISATEUR_CONNEXION(@p1, @p2, @p3);");
+        $this -> db -> query("CALL CONNEXION_UTILISATEUR(@p1, @p2, @p3);");
         $result = $this -> db -> query("SELECT @p3 AS `ISOK`;");
         $row = $result -> fetch($this -> db::FETCH_ASSOC);
         $isOk = $row['ISOK'];
