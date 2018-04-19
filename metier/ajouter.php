@@ -5,3 +5,5 @@
 
     $insert = new Queries();
     $insert->insertUtilisateur($values);
+    
+    header('../index.html');
