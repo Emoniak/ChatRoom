@@ -31,6 +31,11 @@ class Queries
         }
     }
 
+    function insertUtilisateur($values) {
+        self::prepareProcedure($values);
+        $this -> db -> query("CALL INSERT_UTILISATEUR(@p1, @p2, @p3);");
+    }
+
     function insertMessage($values){
         self::prepareProcedure($values);
         $this -> db -> query("CALL INSERT_MESSAGE(@p1, @p2, @p3);");
