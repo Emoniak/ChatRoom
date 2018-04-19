@@ -5,6 +5,31 @@
     <title>Title</title>
 </head>
 <body>
+<form action="Connexion.php" method="post">
+    <div class="form-group">
+        <label>Email address</label>
+        <input type="email" class="form-control" placeholder="Enter email" name="mail">
+    </div>
+    <div class="form-group">
+        <label>Pseudo</label>
+        <input type="text" class="form-control" placeholder="Entrer votre mot de passe" name="surnom">
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" placeholder="Password" name="mdp">
+    </div>
 
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <footer>
+        <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-dark">
+            <div class="footerBottomText">
+                <p>&copy; 2018 - chatBot</p>
+                <a href="#"><img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjMycHgiIGhlaWdodD0iMzJweCIgdmlld0JveD0iMCAwIDQzOC41MzMgNDM4LjUzMyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDM4LjUzMyA0MzguNTMzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZD0iTTQwOS4xMzMsMTA5LjIwM2MtMTkuNjA4LTMzLjU5Mi00Ni4yMDUtNjAuMTg5LTc5Ljc5OC03OS43OTZDMjk1LjczNiw5LjgwMSwyNTkuMDU4LDAsMjE5LjI3MywwICAgYy0zOS43ODEsMC03Ni40Nyw5LjgwMS0xMTAuMDYzLDI5LjQwN2MtMzMuNTk1LDE5LjYwNC02MC4xOTIsNDYuMjAxLTc5LjgsNzkuNzk2QzkuODAxLDE0Mi44LDAsMTc5LjQ4OSwwLDIxOS4yNjcgICBjMCwzOS43OCw5LjgwNCw3Ni40NjMsMjkuNDA3LDExMC4wNjJjMTkuNjA3LDMzLjU5Miw0Ni4yMDQsNjAuMTg5LDc5Ljc5OSw3OS43OThjMzMuNTk3LDE5LjYwNSw3MC4yODMsMjkuNDA3LDExMC4wNjMsMjkuNDA3ICAgczc2LjQ3LTkuODAyLDExMC4wNjUtMjkuNDA3YzMzLjU5My0xOS42MDIsNjAuMTg5LTQ2LjIwNiw3OS43OTUtNzkuNzk4YzE5LjYwMy0zMy41OTYsMjkuNDAzLTcwLjI4NCwyOS40MDMtMTEwLjA2MiAgIEM0MzguNTMzLDE3OS40ODUsNDI4LjczMiwxNDIuNzk1LDQwOS4xMzMsMTA5LjIwM3ogTTM2MS43NCwyNTkuNTE3bC0yOS4xMjMsMjkuMTI5Yy0zLjYyMSwzLjYxNC03LjkwMSw1LjQyNC0xMi44NDcsNS40MjQgICBjLTQuOTQ4LDAtOS4yMzYtMS44MS0xMi44NDctNS40MjRsLTg3LjY1NC04Ny42NTNsLTg3LjY0Niw4Ny42NTNjLTMuNjE2LDMuNjE0LTcuODk4LDUuNDI0LTEyLjg0Nyw1LjQyNCAgIGMtNC45NSwwLTkuMjMzLTEuODEtMTIuODUtNS40MjRsLTI5LjEyLTI5LjEyOWMtMy42MTctMy42MDctNS40MjYtNy44OTgtNS40MjYtMTIuODQ3YzAtNC45NDIsMS44MDktOS4yMjcsNS40MjYtMTIuODQ4ICAgbDEyOS42Mi0xMjkuNjE2YzMuNjE3LTMuNjE3LDcuODk4LTUuNDI0LDEyLjg0Ny01LjQyNHM5LjIzOCwxLjgwNywxMi44NDYsNS40MjRMMzYxLjc0LDIzMy44MjIgICBjMy42MTMsMy42MjEsNS40MjQsNy45MDUsNS40MjQsMTIuODQ4QzM2Ny4xNjQsMjUxLjYxOCwzNjUuMzU3LDI1NS45MDksMzYxLjc0LDI1OS41MTd6IiBmaWxsPSIjNTk1OTU5Ii8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==" /></a>
+                <p>BELLENOUE Antoine - GUILLAUMAT Gregoire</p>
+            </div>
+        </nav>
+    </footer>
+</form>
 </body>
 </html>

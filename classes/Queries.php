@@ -1,9 +1,9 @@
 <?php
 class Queries
 {
-    private $dsn  = "mysql:dbname=chatroom;host=localhost;charset=utf8";
+    private $dsn  = "mysql:dbname=chatboot;host=localhost;charset=utf8";
     private $username = "root";
-    private $password = "";
+    private $password = "@ssassin1397";
     private $db;
 
     function __construct()
