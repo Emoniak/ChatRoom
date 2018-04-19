@@ -11,7 +11,7 @@ if ($canConnect) {
         $_SESSION["$key"] = $value;
     }
 
-    header('Location: index.php');
+    header('Location: ../index.html');
     return;
 }
-header('Location: Connexion.php');
+header('Location: connexion.html');
