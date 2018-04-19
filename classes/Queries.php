@@ -36,6 +36,23 @@ class Queries
         $this -> db -> query("CALL INSERT_UTILISATEUR(@p1, @p2, @p3);");
     }
 
+    function connexionUtilisateur($values)
+    {
+        self::prepareProcedure($values);
+        $this -> db -> query("CALL UTILISATEUR_CONNEXION(@p1, @p2, @p3);");
+        $result = $this -> db -> query("SELECT @p3 AS `ISOK`;");
+        $row = $result -> fetch($this -> db::FETCH_ASSOC);
+        $isOk = $row['ISOK'];
+        return !is_null($isOk);
+    }
+
+    function getDonneesUtilisateur($values) {
+        self::prepareProcedure($values);
+        $this-> db ->query("CALL GETDONNEES_UTILISATEUR(@p1, @p2, @p3, @p4);");
+        $result = $this -> db -> query("SELECT @p1 AS MAIL, @p3 AS UTILISATEUR_ID, @p4 AS SURNOM");
+        return $result -> fetch($this -> db::FETCH_ASSOC);
+    }
+
     function insertMessage($values){
         self::prepareProcedure($values);
         $this -> db -> query("CALL INSERT_MESSAGE(@p1, @p2, @p3);");
